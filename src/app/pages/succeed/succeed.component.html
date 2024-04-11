@@ -1,0 +1,32 @@
+<div class="min-h-screen bg-veryDarkBlue flex justify-center items-center">
+  <div class="min-w-72 mx-4 p-6 bg-darkBlue rounded-md max-w-96">
+    <div class="flex items-center justify-center">
+      <img
+        class="mt-0"
+        src="../../../assets/images/illustration-thank-you.svg"
+      />
+    </div>
+
+    <div class="flex items-center justify-center">
+      <p
+        class="text-center py-2 px-4 my-0 text-orange bg-veryDarkBlue rounded-full"
+      >
+        You selected {{ rating }} out of 5
+      </p>
+    </div>
+
+    <h3 class="text-white text-center">Thank you</h3>
+
+    <p class="text-mediumGrey text-center">
+      We appreciate you taking the time to give a rating. If you ever need more
+      support, don't hesitate to get in touch!
+    </p>
+
+    <button
+      (click)="handleBackToHome()"
+      class="bg-orange hover:bg-white hover:text-orange tracking-wider px-4 py-2 text-white w-full rounded-md"
+    >
+      Back to home
+    </button>
+  </div>
+</div>

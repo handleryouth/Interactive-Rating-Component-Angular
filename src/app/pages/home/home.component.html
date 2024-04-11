@@ -1,0 +1,37 @@
+<div class="min-h-screen bg-veryDarkBlue flex justify-center items-center">
+  <div class="min-w-72 mx-4 p-6 bg-darkBlue rounded-md max-w-96">
+    <img
+      class="not-prose p-4 bg-mediumGrey rounded-full"
+      src="../../../assets/images/icon-star.svg"
+      alt="star"
+    />
+
+    <h3 class="text-white">How did we do?</h3>
+    <p class="text-lightGrey">
+      Please let us know how we did with your support request. All feedback is
+      appreciated to help us improve our offering
+    </p>
+
+    <div class="flex flex-row items-center gap-x-4 justify-between mb-8">
+      <button
+        [ngClass]="[
+          'w-1/5 hover:bg-orange hover:text-white rounded-full  aspect-square flex items-center justify-center',
+          selectedValue === i + 1
+            ? 'bg-mediumGrey text-white'
+            : 'bg-veryDarkBlue text-mediumGrey'
+        ]"
+        *ngFor="let start of stars; index as i"
+        (click)="handleRatingButton(i + 1)"
+      >
+        {{ i + 1 }}
+      </button>
+    </div>
+
+    <button
+      (click)="handleSubmit()"
+      class="bg-orange hover:bg-white hover:text-orange tracking-wider px-4 py-2 text-white w-full rounded-md"
+    >
+      SUBMIT
+    </button>
+  </div>
+</div>
